@@ -4,21 +4,21 @@
 
 ::: tip Información del Curso
 
-**Profesor:** Guillermo Garrido - Alfredo Oltra
+**Profesor:** Miquel Àngel París i Peñaranda
 
-**Ciclo Formativo:** Desarrollo de Aplicaciones Web (DAW) y Desarrollo de Aplicaciones Multiplataforma (DAM)
+**Ciclo Formativo:** Desarrollo de Aplicaciones Web (DAW)
 
-**Familia Profesional:** Informática
+**Familia Profesional:** Informática y Comunicaciones
 
 **Curso:** Primero
 
-**Horas semanales:** 1 hora (modalidad online)
+**Horas semanales:** 1 hora (modalidad semipresencial)
 
 **Horas totales:** 34 horas (de las 2000 del ciclo formativo)
 
 **Año Académico:** 2026-2027
 
-**Centro:** Centro Específico de Educación a Distancia (CEED, Comunidad Valenciana)
+**Centro:** IES Serpis
 
 <table>
 <tr>

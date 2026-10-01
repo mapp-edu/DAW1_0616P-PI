@@ -70,6 +70,26 @@ const s2Sidebar: DefaultTheme.SidebarItem[] = [
   },
 ]
 
+// ── Sesión 3 · Metodologías Ágiles. Scrum ──────────────────────────────────
+const s3Items: DefaultTheme.SidebarItem[] = [
+  { text: 'Inicio', link: '/contenidos/' },
+  { text: '1. Metodologías', link: '/contenidos/capitulo-1-metodologias' },
+  { text: '2. Metodologías Tradicionales', link: '/contenidos/capitulo-2-tradicional' },
+  { text: '3. Metodologías Ágiles', link: '/contenidos/capitulo-3-agil' },
+  { text: '4. Scrum (I)', link: '/contenidos/capitulo-4-scrum-1' },
+  { text: '5. Scrum (II)', link: '/contenidos/capitulo-5-scrum-2' },
+  { text: '6. Scrum (III)', link: '/contenidos/capitulo-6-scrum-3' },
+  { text: '7. Ejemplo práctico', link: '/contenidos/capitulo-7-ejemplo-scrum' },
+]
+
+const s3Sidebar: DefaultTheme.SidebarItem[] = [
+  {
+    text: 'Metodologías Ágiles. Scrum',
+    collapsed: false,
+    items: s3Items,
+  },
+]
+
 // ============================================================================
 // 2. REGISTRO DE UNIDADES
 // ============================================================================
@@ -133,6 +153,17 @@ export const UNITS: Record<string, UnitConfig> = {
     navbar: [{ text: '🏠 Guía Didáctica', link: '/' }],
     sidebar: s2Sidebar
   },
+  
+  S3: {
+    id: 'S3',
+    code: 's3',         // → archivos en src/s3/
+    title: 'Sesión 3',
+    fullTitle: 'Sesión 3 · Metodologías Ágiles. Scrum',
+    siteTitle: 'Proyecto </br>intermodular I',
+    icon: '🏃',
+    navbar: [{ text: 'Guía Didáctica', link: '/' }],
+    sidebar: s3Sidebar
+  },
 
 }
 
@@ -157,8 +188,10 @@ export function getUnitByCode(code: string): UnitConfig | undefined {
 // añadiendo la nueva línea al final.
 const S1 = { text: 'S1 — Fundamentos del Project Management', link: '/s1/contenidos/' }
 const S2 = { text: 'S2 — Metodologías Ágiles. Scrum',         link: '/s2/contenidos/' }
+const S3 = { text: 'S3 — Metodologías Ágiles. Scrum', link: '/s3/contenidos/' }
 
 export const unitNavbars: Record<string, NavGroup[]> = {
   s1: [{ text: '📚 Sesiones', items: [S1] }],
   s2: [{ text: '📚 Sesiones', items: [S1, S2] }],
+  s3: [{ text: 'Sesiones', items: [S1, S2, S3] }],
 }

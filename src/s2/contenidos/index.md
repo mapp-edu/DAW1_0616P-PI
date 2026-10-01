@@ -1,1 +1,1 @@
-crear con NotebookLM
+Resumen NoteBook LM

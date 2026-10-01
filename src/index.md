@@ -4,11 +4,11 @@
 
 ::: tip Información del Curso
 
-**Profesor:** Guillermo Garrido - Alfredo Oltra
+**Profesor:** Miquel Àngel París i Peñaranda
 
-**Ciclo Formativo:** Desarrollo de Aplicaciones Web (DAW) y Desarrollo de Aplicaciones Multiplataforma (DAM)
+**Ciclo Formativo:** Desarrollo de Aplicaciones Web (DAW)
 
-**Familia Profesional:** Informática
+**Familia Profesional:** Informática y Comunicaciones
 
 **Curso:** Primero
 
@@ -18,7 +18,7 @@
 
 **Año Académico:** 2026-2027
 
-**Centro:** Centro Específico de Educación a Distancia (CEED, Comunidad Valenciana)
+**Centro:** IES Serpis
 
 <table>
 <tr>
@@ -440,7 +440,6 @@ Este módulo tiene **tutorías individuales**, siempre con cita previa con el pr
 :::
 
 ## Entregas y Seguimiento del Proyecto
-
 
 La primera pregunta del curso es **¿cursas PI2 este año?**, porque la respuesta cambia
 qué entregas. Los contenidos, los resultados de aprendizaje y la rúbrica son idénticos en

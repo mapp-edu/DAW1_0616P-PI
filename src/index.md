@@ -12,7 +12,7 @@
 
 **Curso:** Primero
 
-**Horas semanales:** 1 hora (modalidad online)
+**Horas semanales:** 1 hora (modalidad semipresencial)
 
 **Horas totales:** 34 horas (de las 2000 del ciclo formativo)
 

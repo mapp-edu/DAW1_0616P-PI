@@ -14,7 +14,7 @@
     "docs:preview": "vitepress preview docs"
   },
   "devDependencies": {
-    "@rollup/rollup-win32-x64-msvc": "4.41.0",
+    "@rollup/rollup-linux-x64-gnu": "^4.49.0",
     "@types/mermaid": "^9.1.0",
     "markdown-it-container": "^4.0.0",
     "mermaid": "^11.10.1",

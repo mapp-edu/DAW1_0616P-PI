@@ -50,21 +50,20 @@ const s1Sidebar: DefaultTheme.SidebarItem[] = [
   },
 ]
 
-// ── Sesión 2 · Metodologías Ágiles. Scrum ──────────────────────────────────
+// ── Sesión 2 · Comunicación verbal y no verbal ─────────────────────────────
 const s2Items: DefaultTheme.SidebarItem[] = [
   { text: 'Inicio', link: '/contenidos/' },
-  { text: '1. Metodologías', link: '/contenidos/capitulo-1-metodologias' },
-  { text: '2. Metodologías Tradicionales', link: '/contenidos/capitulo-2-tradicional' },
-  { text: '3. Metodologías Ágiles', link: '/contenidos/capitulo-3-agil' },
-  { text: '4. Scrum (I)', link: '/contenidos/capitulo-4-scrum-1' },
-  { text: '5. Scrum (II)', link: '/contenidos/capitulo-5-scrum-2' },
-  { text: '6. Scrum (III)', link: '/contenidos/capitulo-6-scrum-3' },
-  { text: '7. Ejemplo práctico', link: '/contenidos/capitulo-7-ejemplo-scrum' },
+  { text: '1. Fundamentos de la comunicación efectiva', link: '/contenidos/capitulo-1-fundamentos-comunicacion' },
+  { text: '2. Diseño de diapositivas e impacto visual', link: '/contenidos/capitulo-2-disenyo_diapositivas' },
+  { text: '3. Estrategias de comunicación', link: '/contenidos/capitulo-3-estrategias_enganche_y_retencion' },
+  { text: '4. Enfoque comercial vs. técnico', link: '/contenidos/capitulo-4-enfoque_comercial_vs_tecnico' },
+  { text: '5. Preguntas y debate', link: '/contenidos/capitulo-5-preguntas_y_debate' },
+  { text: '6. Ensayo, tiempos y cierre', link: '/contenidos/capitulo-6-ensayo' },
 ]
 
 const s2Sidebar: DefaultTheme.SidebarItem[] = [
   {
-    text: 'Metodologías Ágiles. Scrum',
+    text: 'Comunicación verbal y no verbal',
     collapsed: false,
     items: s2Items,
   },
@@ -90,6 +89,17 @@ const s3Sidebar: DefaultTheme.SidebarItem[] = [
   },
 ]
 
+// ── Desplegable de sesiones del navbar global ──────────────────────────────
+// Al añadir una sesión nueva, añade aquí su línea.
+const sessionsNav: DefaultTheme.NavItem = {
+  text: '📚 Sesiones',
+  items: [
+    { text: 'S1 — Fundamentos del Project Management', link: '/s1/contenidos/' },
+    { text: 'S2 — Comunicación verbal y no verbal',     link: '/s2/contenidos/' },
+    { text: 'S3 — Metodologías Ágiles. Scrum',          link: '/s3/contenidos/' },
+  ],
+}
+
 // ============================================================================
 // 2. REGISTRO DE UNIDADES
 // ============================================================================
@@ -103,7 +113,7 @@ const s3Sidebar: DefaultTheme.SidebarItem[] = [
 //   icon      — Emoji decorativo
 //   navbar    — Barra superior. El navbar global lo aporta `root`; en las
 //               sesiones basta con el enlace a la guía. El desplegable de
-//               sesiones se define abajo, en unitNavbars.
+//               sesiones está en sessionsNav (navbar de root).
 //   sidebar   — Ítems del panel lateral de esta unidad
 
 export interface UnitConfig {
@@ -128,7 +138,7 @@ export const UNITS: Record<string, UnitConfig> = {
     fullTitle: 'Proyecto intermodular I',
     siteTitle: 'Proyecto </br>intermodular I',
     icon: '🏠',
-    navbar: [{ text: '🏠 Guía Didáctica', link: '/' }],
+    navbar: [{ text: '🏠 Guía Didáctica', link: '/' }, sessionsNav],
     sidebar: []
   },
 
@@ -147,9 +157,9 @@ export const UNITS: Record<string, UnitConfig> = {
     id: 'S2',
     code: 's2',         // → archivos en src/s2/
     title: 'Sesión 2',
-    fullTitle: 'Sesión 2 · Metodologías Ágiles. Scrum',
+    fullTitle: 'Sesión 2 · Comunicación verbal y no verbal',
     siteTitle: 'Proyecto </br>intermodular I',
-    icon: '🏃',
+    icon: '🎤',
     navbar: [{ text: '🏠 Guía Didáctica', link: '/' }],
     sidebar: s2Sidebar
   },
@@ -161,7 +171,7 @@ export const UNITS: Record<string, UnitConfig> = {
     fullTitle: 'Sesión 3 · Metodologías Ágiles. Scrum',
     siteTitle: 'Proyecto </br>intermodular I',
     icon: '🏃',
-    navbar: [{ text: 'Guía Didáctica', link: '/' }],
+    navbar: [{ text: '🏠 Guía Didáctica', link: '/' }],
     sidebar: s3Sidebar
   },
 
@@ -180,18 +190,7 @@ export function getUnitByCode(code: string): UnitConfig | undefined {
 }
 
 // ── Navbar dinámico por unidad ───────────────────────────────────────────
-// Desplegable «📚 Sesiones» que aparece en la barra superior solo cuando
-// estás dentro de una sesión. Es acumulativo: dentro de la sesión N se
-// listan la N y todas las anteriores, nunca las futuras.
-//
-// Al añadir la sesión 3: crear su entrada aquí copiando la lista de s2 y
-// añadiendo la nueva línea al final.
-const S1 = { text: 'S1 — Fundamentos del Project Management', link: '/s1/contenidos/' }
-const S2 = { text: 'S2 — Metodologías Ágiles. Scrum',         link: '/s2/contenidos/' }
-const S3 = { text: 'S3 — Metodologías Ágiles. Scrum', link: '/s3/contenidos/' }
-
-export const unitNavbars: Record<string, NavGroup[]> = {
-  s1: [{ text: '📚 Sesiones', items: [S1] }],
-  s2: [{ text: '📚 Sesiones', items: [S1, S2] }],
-  s3: [{ text: 'Sesiones', items: [S1, S2, S3] }],
-}
+// Desactivado: el desplegable «📚 Sesiones» forma parte del navbar global
+// (UNITS.root.navbar) y se ve en todas las páginas, incluida la portada.
+// Se mantiene el export porque config.mts lo importa.
+export const unitNavbars: Record<string, NavGroup[]> = {}
